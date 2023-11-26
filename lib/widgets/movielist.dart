@@ -133,10 +133,10 @@ class _MovieListScreenState extends State<MovieListScreen> {
                           );
                         },
                         child: MovieItemWidget(
-                            name: "$movieTitle",
-                            desc: "$movieOverview",
-                            img: img!,
-                            id: index),
+                          name: "$movieTitle",
+                          desc: "$movieOverview",
+                          img: img!,
+                        ),
                       );
                     } else {
                       return Container();

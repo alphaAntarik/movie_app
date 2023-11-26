@@ -7,14 +7,9 @@ class MovieItemWidget extends StatelessWidget {
   final String name;
   final String desc;
   final String img;
-  final int id;
 
   MovieItemWidget(
-      {Key? key,
-      required this.id,
-      required this.img,
-      required this.name,
-      required this.desc})
+      {Key? key, required this.img, required this.name, required this.desc})
       : super(key: key);
 
   @override
@@ -24,11 +19,8 @@ class MovieItemWidget extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => MovieDetailsScreen(
-                    img: img,
-                    tag: 'img$id',
-                    desc: desc,
-                  )),
+              builder: (context) =>
+                  MovieDetailsScreen(img: img, desc: desc, name: name)),
         );
       },
       child: Container(
